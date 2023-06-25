@@ -14,14 +14,14 @@
 	<insert id="write">
 		INSERT INTO mvc_board(bid, bname, btitle, bcontent) VALUES (mvc_board_seq.nextval, #{param1}, #{param2}, #{param3})
 	</insert>
-	<insert id="modify">
+	<update id="modify">
 		UPDATE mvc_board SET btitle=#{param2}, bcontent=#{param3} WHERE bid=#{param1}
-	</insert>
-	<select id="delete">
+	</update>
+	<delete id="delete">
 		DELETE FROM mvc_board WHERE bid=#{param1}
-	</select>
-	<select id="uphit">
+	</delete>
+	<update id="uphit">
 		UPDATE mvc_board SET bhit=bhit+1 WHERE bid=#{param1}
-	</select>
+	</update>
 
 </mapper>
